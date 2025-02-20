@@ -1,0 +1,13 @@
+name: Simple Test Workflow
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 簡単なメッセージを表示
+        run: |
+          echo "Hello, GitHub Actions!"
+          echo ${{ secrets.TEST_ABC }}
+          echo ${{ secrets.TEST_TEST }}
